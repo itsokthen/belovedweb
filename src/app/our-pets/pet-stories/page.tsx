@@ -7,14 +7,14 @@ export default function Page() {
       <h1 className="text-6xl font-bold text-altSec mb-10">Pet Stories</h1>
       <p>
         Telling stories is one of the things that has given me so much relief.
-        It's hard, when all I felt was the grief, to remember that my pet's
-        death was only a very small part of the whole story. There was an entire
-        life and countless stories about those lives. Here, we will feature
-        those stories.
+        It&apos;s hard, when all I felt was the grief, to remember that my
+        pet&apos;s death was only a very small part of the whole story. There
+        was an entire life and countless stories about those lives. Here, we
+        will feature those stories.
       </p>
       <p>
         {" "}
-        You don't have to be a great storyteller. I will help you with the
+        You Don&apos;t have to be a great storyteller. I will help you with the
         writing if you need it.
       </p>
       <p>
@@ -25,7 +25,7 @@ export default function Page() {
       </p>
       <p>
         {" "}
-        Another night each week, I'd love to have a Poetry Slam. We could
+        Another night each week, I&apos;d love to have a Poetry Slam. We could
         include that poetry here along with the stories.
       </p>
     </div>

@@ -4,7 +4,7 @@ export default function Page() {
       <h1 className="text-6xl font-bold text-altSec mb-10">Pet Care Program</h1>
       <p>
         With broken hearts, we offer compassion and grace to pets and pet owners
-        we'll probably never meet.
+        we&apos;ll probably never meet.
       </p>
       <p>
         {" "}
@@ -26,15 +26,15 @@ export default function Page() {
       </p>
       <p>
         {" "}
-        It's possible that once this fund is up and running that we can
+        It&apos;s possible that once this fund is up and running that we can
         coordinate with other organizations that assist with vet bills. The more
         BEloved grows, and spreads nationwide, the more vets that will have
         access to this fund.
       </p>
       <p>
         {" "}
-        Eventually, I'd like this program to offer a pre-paid medical plan that
-        includes financing and guaranteed payment to vets at pre-negotiated
+        Eventually, I&apos;d like this program to offer a pre-paid medical plan
+        that includes financing and guaranteed payment to vets at pre-negotiated
         rates.
       </p>
     </div>

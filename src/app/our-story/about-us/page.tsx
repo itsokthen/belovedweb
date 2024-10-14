@@ -17,7 +17,7 @@ export default function Page() {
       </p>
       <p className="mt-5">
         We have funerals. We have rituals and ceremonies. We know what to say to
-        each other. IT’S LIKE A LANGUAGE that helps us grieve, heal and get
+        each other. It&apos;s LIKE A LANGUAGE that helps us grieve, heal and get
         through the grief. Not just words. But a social{" "}
         <span className="font-bold text-primary">connection</span> and{" "}
         <span className="font-bold text-primary">understanding</span> of the
@@ -41,15 +41,15 @@ export default function Page() {
         {" "}
         I call it a clubhouse, but it looks like a bar and works like a bar.
         We’ll serve drinks and beers and some REALLY GOOD food. If you want to
-        come have a beer and cry about your pet, you can do that, and you'll be
-        surrounded by people who understand. If you want to come have a beer and
-        NOT cry about your pet, you can do that too, and you will still be
-        surrounded by people who{" "}
+        come have a beer and cry about your pet, you can do that, and
+        you&apos;ll be surrounded by people who understand. If you want to come
+        have a beer and NOT cry about your pet, you can do that too, and you
+        will still be surrounded by people who{" "}
         <span className="font-bold text-primary">understand.</span>
       </p>
       <p className="mt-5">
         {" "}
-        But this “bar”, will be much, much more than that. It’s a place to
+        But this “bar”, will be much, much more than that. It&apos;s a place to
         develop the <span className="font-bold text-primary">
           tools
         </span> and <span className="font-bold text-primary">resources</span> to

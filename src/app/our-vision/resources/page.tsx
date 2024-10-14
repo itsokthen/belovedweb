@@ -16,8 +16,9 @@ export default function Page() {
         Of course, we will highlight the pet memorials that WE make. Ours are
         unique and specifically designed for the person and their home. They are
         interactive in some way, with clocks, lamps, and always, a music box.
-        They include pictures and parts of the pet's life such as their collar,
-        tags, toys, blankets, or anything else that needs to be remembered.
+        They include pictures and parts of the pet&apos;s life such as their
+        collar, tags, toys, blankets, or anything else that needs to be
+        remembered.
       </p>
     </div>
   );

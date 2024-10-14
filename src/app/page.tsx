@@ -11,14 +11,16 @@ export default function Home() {
           <p className="text-3xl">
             When we lose a beloved pet, the grief can be overwhelming, but often
             we lack the support and understanding that comes with losing a
-            person. At the Clubhouse, we've created a space where you can{" "}
+            person. At the Clubhouse, we&apos;ve created a space where you can{" "}
             <span className="font-bold text-primary">
               share your experience with others who understand.
             </span>{" "}
-            Whether you want to have a drink and cry, or simply relax, you'll be
-            surrounded by people who speak the same "language" of loss. It's
-            more than a bar —{" "}
-            <span className="font-bold text-primary">it's a community</span>{" "}
+            Whether you want to have a drink and cry, or simply relax,
+            you&apos;ll be surrounded by people who speak the same "language" of
+            loss. It&apos;s more than a bar —{" "}
+            <span className="font-bold text-primary">
+              It&apos;s a community
+            </span>{" "}
             offering tools, resources, and a warm environment to help you heal.{" "}
             <span className="font-bold text-primary">Come check us out!</span>
           </p>
