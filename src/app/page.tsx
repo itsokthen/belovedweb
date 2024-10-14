@@ -1,37 +1,9 @@
-import Nav from "./components/Nav";
-import Image from "next/image";
-import Footer from "./components/Footer";
+import React from "react";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <Nav />
+    <div>
       <section>
-        <div style={{ position: "relative", width: "100%", height: "200px" }}>
-          <Image
-            src={"/catBeloved.jpg"}
-            alt="Banner Image of Cat"
-            fill
-            objectFit="cover"
-            style={{ objectPosition: "center bottom" }}
-          />
-          <h1
-            style={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              color: "white",
-              textAlign: "center",
-              fontSize: "3rem",
-              fontWeight: "bold",
-            }}
-          >
-            Home
-          </h1>
-        </div>
-      </section>
-      <section className="flex-grow">
         <div className="mx-10 my-10">
           <h1 className="text-6xl font-bold text-altSec mb-10">
             Welcome to the Clubhouse: A Place for Healing
@@ -96,9 +68,6 @@ export default function Home() {
             environment. Come check out the clubhouse!! (link)
           </p> */}
         </div>
-      </section>
-      <section>
-        <Footer />
       </section>
     </div>
   );

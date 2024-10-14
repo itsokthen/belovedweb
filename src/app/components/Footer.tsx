@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <div className="bg-secondary">
       {/* 3 Images side by side */}
-      <div className="flex justify-evenly pt-10">
+      <div className="flex justify-evenly pt-10 text-center">
         <Image src="/Icon1.png" alt="Dog Paw Icon" width="70" height="70" />
         <Image src="/Icon2.png" alt="Heart Icon" width="70" height="70" />
         <Image src="/Icon3.png" alt="Peace Icon" width="70" height="70" />
@@ -30,6 +30,9 @@ const Footer = () => {
           <h4>info@BEloved.com</h4>
         </div>
         <div className="mt-5">Image of facebook and insta</div>
+        <div className="mt-5 mb-5">
+          <h4>&copy; BEloved</h4>
+        </div>
       </div>
     </div>
   );
