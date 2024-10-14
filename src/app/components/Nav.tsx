@@ -1,12 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import styles from "./navcss.module.css";
 import Hamburgerbutton from "./Hamburgerbutton";
 
 const Nav = () => {
   return (
     <div>
-      <div className={styles.flexes}>
+      <div className="flex justify-between">
         <Image
           src={`/Logo1-lg.png`}
           alt="Beloved Logo"
