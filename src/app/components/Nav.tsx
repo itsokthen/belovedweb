@@ -1,6 +1,5 @@
 "use client";
-import React from "react";
-import { useState } from "react";
+import React, { useState, useRef } from "react";
 import Image from "next/image";
 import Hamburgerbutton from "./Hamburgerbutton";
 import OpenNav from "./OpenNav";
@@ -8,23 +7,14 @@ import Link from "next/link";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const hamburgerButtonRef = useRef<HTMLButtonElement>(null);
 
-  // navRef.current returning null
-  // const navRef = React.useRef<HTMLElement | null>(null);
-  // useEffect(() => {
-  //   if (navRef.current) {
-  //     const navHeight = navRef.current.offsetHeight;
-  //     document.documentElement.style.setProperty(
-  //       "--nav-height",
-  //       `${navHeight}px`
-  //     );
-  //   }
-  // }, []);
-  const toggleOpenNav = () => {
-    setIsOpen(!isOpen);
+  const toggleNav = (event: React.MouseEvent) => {
+    event.stopPropagation();
+    setIsOpen((prev) => !prev);
   };
 
-  const closeOpenNav = () => {
+  const closeNav = () => {
     setIsOpen(false);
   };
 
@@ -36,15 +26,20 @@ const Nav = () => {
             <Image
               src={`/Logo1-lg.png`}
               alt="Beloved Logo"
-              height="500"
-              width="200"
+              width={200}
+              height={200}
+              priority
             />
           </Link>
-          <Hamburgerbutton onClick={toggleOpenNav} />
+          <Hamburgerbutton onClick={toggleNav} ref={hamburgerButtonRef} />
         </div>
       </div>
-      {/* Pass closeOpenNav to OpenNav */}
-      {isOpen && <OpenNav closeOpenNav={closeOpenNav} />}
+      {isOpen && (
+        <OpenNav
+          closeOpenNav={closeNav}
+          hamburgerButtonRef={hamburgerButtonRef}
+        />
+      )}
     </div>
   );
 };

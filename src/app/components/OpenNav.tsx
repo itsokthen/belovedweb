@@ -3,9 +3,13 @@ import Link from "next/link";
 
 interface OpenNavProps {
   closeOpenNav: () => void;
+  hamburgerButtonRef: React.RefObject<HTMLButtonElement>; // Pass ref to Hamburger button
 }
 
-const OpenNav: React.FC<OpenNavProps> = ({ closeOpenNav }) => {
+const OpenNav: React.FC<OpenNavProps> = ({
+  closeOpenNav,
+  hamburgerButtonRef,
+}) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const navRef = useRef<HTMLDivElement>(null);
 
@@ -13,10 +17,16 @@ const OpenNav: React.FC<OpenNavProps> = ({ closeOpenNav }) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  // Close the nav if clicked outside
+  // Close the nav if clicked outside except on hamburgerbutton
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+      const target = event.target as Node;
+      if (
+        navRef.current &&
+        !navRef.current.contains(target) &&
+        hamburgerButtonRef.current &&
+        !hamburgerButtonRef.current.contains(target)
+      ) {
         closeOpenNav();
       }
     };
@@ -25,7 +35,7 @@ const OpenNav: React.FC<OpenNavProps> = ({ closeOpenNav }) => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [navRef, closeOpenNav]);
+  }, [navRef, closeOpenNav, hamburgerButtonRef]);
 
   return (
     <div ref={navRef}>

@@ -1,16 +1,33 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const ImageSection = () => {
+  const pathname = usePathname();
+
+  let sectionText = "Home";
+  let imageUrl = "/catBeloved.jpg";
+
+  if (pathname.startsWith("/our-story")) {
+    sectionText = "Our Story";
+    imageUrl = "/our-story-banner.jpg";
+  } else if (pathname.startsWith("/our-pets")) {
+    sectionText = "Our Pets";
+    imageUrl = "/our-pets-banner.jpg";
+  } else if (pathname.startsWith("/our-vision")) {
+    sectionText = "Our Vision";
+    imageUrl = "/our-vision-banner.jpg";
+  }
+
   return (
     <section>
       <div style={{ position: "relative", width: "100%", height: "200px" }}>
         <Image
-          src={"/catBeloved.jpg"}
-          alt="Banner Image of Cat"
+          src={imageUrl}
+          alt={`${sectionText} Banner Image`}
           fill
-          objectFit="cover"
-          style={{ objectPosition: "center bottom" }}
+          className="object-cover"
         />
         <h1
           style={{
@@ -24,7 +41,7 @@ const ImageSection = () => {
             fontWeight: "bold",
           }}
         >
-          Home
+          {sectionText}
         </h1>
       </div>
     </section>
