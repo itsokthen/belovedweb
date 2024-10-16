@@ -1,19 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 
 interface OpenNavProps {
-  closeOpenNav: () => void; // Define the prop type
+  closeOpenNav: () => void;
 }
 
 const OpenNav: React.FC<OpenNavProps> = ({ closeOpenNav }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const navRef = useRef<HTMLDivElement>(null);
 
   const toggleDropdown = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  // Close the nav if clicked outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        closeOpenNav();
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [navRef, closeOpenNav]);
+
   return (
-    <div>
+    <div ref={navRef}>
       <div
         className="fixed z-50 bg-white h-screen right-0 w-4/5 flex flex-col shadow-lg"
         style={{
@@ -38,11 +53,11 @@ const OpenNav: React.FC<OpenNavProps> = ({ closeOpenNav }) => {
             </p>
             {openIndex === 0 && (
               <ul className="ml-4 mt-2 bg-gray-100 rounded shadow p-4">
-                <li className="py-2 text-lg hover:bg-gray-200 transition">
-                  <Link href="/our-story/about-us" onClick={closeOpenNav}>
+                <Link href="/our-story/about-us" onClick={closeOpenNav}>
+                  <li className="py-2 text-lg hover:bg-gray-200 transition">
                     About Us
-                  </Link>
-                </li>
+                  </li>
+                </Link>
               </ul>
             )}
           </li>
@@ -62,21 +77,21 @@ const OpenNav: React.FC<OpenNavProps> = ({ closeOpenNav }) => {
             </p>
             {openIndex === 1 && (
               <ul className="ml-4 mt-2 bg-gray-100 rounded shadow p-4">
-                <li className="py-2 text-lg hover:bg-gray-200 transition">
-                  <Link href="/our-pets/good-grief" onClick={closeOpenNav}>
+                <Link href="/our-pets/good-grief" onClick={closeOpenNav}>
+                  <li className="py-2 text-lg hover:bg-gray-200 transition">
                     Good Grief
-                  </Link>
-                </li>
-                <li className="py-2 text-lg hover:bg-gray-200 transition">
-                  <Link href="/our-pets/memorials" onClick={closeOpenNav}>
+                  </li>
+                </Link>
+                <Link href="/our-pets/memorials" onClick={closeOpenNav}>
+                  <li className="py-2 text-lg hover:bg-gray-200 transition">
                     Memorials
-                  </Link>
-                </li>
-                <li className="py-2 text-lg hover:bg-gray-200 transition">
-                  <Link href="/our-pets/pet-stories" onClick={closeOpenNav}>
+                  </li>
+                </Link>
+                <Link href="/our-pets/pet-stories" onClick={closeOpenNav}>
+                  <li className="py-2 text-lg hover:bg-gray-200 transition">
                     Pet Stories
-                  </Link>
-                </li>
+                  </li>
+                </Link>
               </ul>
             )}
           </li>
@@ -96,34 +111,34 @@ const OpenNav: React.FC<OpenNavProps> = ({ closeOpenNav }) => {
             </p>
             {openIndex === 2 && (
               <ul className="ml-4 mt-2 bg-gray-100 rounded shadow p-4">
-                <li className="py-2 text-lg hover:bg-gray-200 transition">
-                  <Link
-                    href="/our-vision/pet-care-program"
-                    onClick={closeOpenNav}
-                  >
+                <Link
+                  href="/our-vision/pet-care-program"
+                  onClick={closeOpenNav}
+                >
+                  <li className="py-2 text-lg hover:bg-gray-200 transition">
                     Pet Care Program
-                  </Link>
-                </li>
-                <li className="py-2 text-lg hover:bg-gray-200 transition">
-                  <Link href="/our-vision/the-clubhouse" onClick={closeOpenNav}>
+                  </li>
+                </Link>
+                <Link href="/our-vision/the-clubhouse" onClick={closeOpenNav}>
+                  <li className="py-2 text-lg hover:bg-gray-200 transition">
                     The Clubhouse
-                  </Link>
-                </li>
-                <li className="py-2 text-lg hover:bg-gray-200 transition">
-                  <Link href="/our-vision/the-village" onClick={closeOpenNav}>
+                  </li>
+                </Link>
+                <Link href="/our-vision/the-village" onClick={closeOpenNav}>
+                  <li className="py-2 text-lg hover:bg-gray-200 transition">
                     The Village
-                  </Link>
-                </li>
-                <li className="py-2 text-lg hover:bg-gray-200 transition">
-                  <Link href="/our-vision/the-tv-show" onClick={closeOpenNav}>
+                  </li>
+                </Link>
+                <Link href="/our-vision/the-tv-show" onClick={closeOpenNav}>
+                  <li className="py-2 text-lg hover:bg-gray-200 transition">
                     The TV Show
-                  </Link>
-                </li>
-                <li className="py-2 text-lg hover:bg-gray-200 transition">
-                  <Link href="/our-vision/resources" onClick={closeOpenNav}>
+                  </li>
+                </Link>
+                <Link href="/our-vision/resources" onClick={closeOpenNav}>
+                  <li className="py-2 text-lg hover:bg-gray-200 transition">
                     Resources
-                  </Link>
-                </li>
+                  </li>
+                </Link>
               </ul>
             )}
           </li>
