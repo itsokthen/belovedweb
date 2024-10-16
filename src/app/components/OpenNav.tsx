@@ -40,11 +40,9 @@ const OpenNav: React.FC<OpenNavProps> = ({
   return (
     <div ref={navRef}>
       <div
-        className="fixed z-50 bg-white h-screen right-0 w-4/5 flex flex-col shadow-lg"
-        style={{
-          top: "var(--navHeightSM)",
-          height: "calc(100vh - var(--navHeightSM))",
-        }}
+        className="fixed z-50 bg-white  right-0 w-4/5 flex flex-col shadow-lg 
+             top-[var(--navHeightSM)] lg:top-[var(--navHeightLG)] 
+             h-[calc(100vh-var(--navHeightSM))] lg:h-[calc(100vh-var(--navHeightLG))]"
       >
         <ul className="flex-grow p-6 space-y-6 border-b border-gray-200">
           <li className="transition-transform duration-300">

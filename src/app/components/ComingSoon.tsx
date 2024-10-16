@@ -12,7 +12,7 @@ const ComingSoon = () => {
           src={"/ComingSoon.png"}
           alt="Coming Soon!"
           fill
-          objectFit="contain"
+          style={{ objectFit: "contain" }}
         />
       </div>
     </div>

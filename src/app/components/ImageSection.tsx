@@ -22,7 +22,7 @@ const ImageSection = () => {
 
   return (
     <section>
-      <div style={{ position: "relative", width: "100%", height: "200px" }}>
+      <div className="relative w-full h-[200px] lg:h-[250px]">
         <Image
           src={imageUrl}
           alt={`${sectionText} Banner Image`}

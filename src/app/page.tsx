@@ -5,7 +5,7 @@ export default function Home() {
     <div>
       <section>
         <div className="mx-10 my-10">
-          <h1 className="text-6xl font-bold text-altSec mb-10">
+          <h1 className="text-6xl text-center font-bold text-altSec mb-10">
             Welcome to the Clubhouse: A Place for Healing
           </h1>
           <p className="text-3xl">
@@ -16,8 +16,8 @@ export default function Home() {
               share your experience with others who understand.
             </span>{" "}
             Whether you want to have a drink and cry, or simply relax,
-            you&apos;ll be surrounded by people who speak the same "language" of
-            loss. It&apos;s more than a bar —{" "}
+            you&apos;ll be surrounded by people who speak the same
+            &quot;language&quot; of loss. It&apos;s more than a bar —{" "}
             <span className="font-bold text-primary">
               It&apos;s a community
             </span>{" "}

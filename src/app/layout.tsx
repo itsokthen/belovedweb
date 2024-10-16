@@ -30,11 +30,11 @@ export default function RootLayout({
     <html lang="en">
       <body className="flex flex-col min-h-screen">
         <Nav />
-        <div className="mt-[var(--navHeightSM)]">
+        <div className="mt-[var(--navHeightSM)] lg:mt-[var(--navHeightLG)]">
           <ImageSection />
         </div>
-        <main className="flex-grow" style={{ marginTop: "var(--nav-height)" }}>
-          {children}
+        <main className="flex-grow flex justify-center">
+          <div className="w-full max-w-[700px]">{children}</div>
         </main>
         <Footer />
       </body>

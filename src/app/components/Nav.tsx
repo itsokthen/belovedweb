@@ -21,16 +21,18 @@ const Nav = () => {
   return (
     <div>
       <div className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
-        <div className="flex justify-between items-center p-4">
-          <Link href="/">
-            <Image
-              src={`/Logo1-lg.png`}
-              alt="Beloved Logo"
-              width={200}
-              height={200}
-              priority
-            />
-          </Link>
+        <div className=" nav-container mx-auto w-full flex justify-between items-center p-4 h-[auto] lg:h-[145px]">
+          <div className="w-[200px] lg:w-[300px]">
+            <Link href="/">
+              <Image
+                src={`/Logo1-lg.png`}
+                alt="Beloved Logo"
+                width={300}
+                height={200}
+                priority
+              />
+            </Link>
+          </div>
           <Hamburgerbutton onClick={toggleNav} ref={hamburgerButtonRef} />
         </div>
       </div>

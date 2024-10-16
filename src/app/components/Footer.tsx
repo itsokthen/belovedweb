@@ -3,14 +3,14 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <div className="bg-secondary">
+    <div className="bg-secondary flex flex-col items-center">
       {/* 3 Images side by side */}
       <div className="flex justify-evenly pt-10 text-center">
         <Image src="/Icon1.png" alt="Dog Paw Icon" width="70" height="70" />
         <Image src="/Icon2.png" alt="Heart Icon" width="70" height="70" />
         <Image src="/Icon3.png" alt="Peace Icon" width="70" height="70" />
       </div>
-      <div className="text-center flex flex-col mx-10 items-center">
+      <div className="text-center flex flex-col mx-10 items-center max-w-[700px]">
         <p>
           Change the Story. We have so much love to give. Many people never get
           another pet because they don’t want to hurt like this again. One pet’s

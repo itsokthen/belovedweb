@@ -16,6 +16,7 @@
 
 :root {
   --navHeightSM: 107.5px;
+  --navHeightLG: 145px;
 }
 html,
 body {
@@ -40,10 +41,14 @@ body {
   font-size: 1.6rem;
 }
 .object-cover {
-  object-fit: cover; /* Ensures the image covers the container */
-  object-position: center bottom; /* Center the image vertically at the bottom */
+  object-fit: cover;
 }
-
+.nav-container {
+  width: 100%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
 /* @layer utilities {
   .text-balance {
     text-wrap: balance;
