@@ -8,6 +8,25 @@ import OpenNav from "./OpenNav";
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  // navRef.current returning null
+  // const navRef = React.useRef<HTMLElement | null>(null);
+  // useEffect(() => {
+  //   if (navRef.current) {
+  //     const navHeight = navRef.current.offsetHeight;
+  //     document.documentElement.style.setProperty(
+  //       "--nav-height",
+  //       `${navHeight}px`
+  //     );
+  //   }
+  // }, []);
+  const toggleOpenNav = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const closeOpenNav = () => {
+    setIsOpen(false);
+  };
+
   return (
     <div>
       <div className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
@@ -18,10 +37,11 @@ const Nav = () => {
             height="500"
             width="200"
           />
-          <Hamburgerbutton onClick={() => setIsOpen(!isOpen)} />
+          <Hamburgerbutton onClick={toggleOpenNav} />
         </div>
       </div>
-      {isOpen && <OpenNav />}
+      {/* Pass closeOpenNav to OpenNav */}
+      {isOpen && <OpenNav closeOpenNav={closeOpenNav} />}
     </div>
   );
 };

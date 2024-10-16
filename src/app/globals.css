@@ -13,6 +13,10 @@
     --foreground: #ededed;
   }
 } */
+
+:root {
+  --navHeightSM: 107.5px;
+}
 html,
 body {
   height: 100%;
