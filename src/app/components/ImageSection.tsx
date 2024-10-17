@@ -29,18 +29,7 @@ const ImageSection = () => {
           fill
           className="object-cover"
         />
-        <h1
-          style={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            color: "white",
-            textAlign: "center",
-            fontSize: "3rem",
-            fontWeight: "bold",
-          }}
-        >
+        <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-[40px] lg:text-[60px] font-bold text-center drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
           {sectionText}
         </h1>
       </div>
