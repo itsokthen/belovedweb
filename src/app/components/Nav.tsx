@@ -21,7 +21,7 @@ const Nav = () => {
   return (
     <div>
       <div className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
-        <div className=" nav-container mx-auto w-full flex items-stretch justify-between p-4 h-[auto] lg:h-[145px]">
+        <div className="w-full max-w-[700px] xl:max-w-[900px] mx-auto flex items-stretch justify-between pt-4 h-[auto] lg:h-[145px]">
           <div className="w-[200px] lg:w-[300px]">
             <Link href="/">
               <Image
@@ -33,50 +33,105 @@ const Nav = () => {
               />
             </Link>
           </div>
-          <div className="hidden">
+          <div className="lg:hidden">
             <Hamburgerbutton onClick={toggleNav} ref={hamburgerButtonRef} />
           </div>
-          <div className="flex items-center">
-            <ul className="flex">
-              <li className="">
-                <h1 className="text-[20px]">Our Story</h1>
-                <ul className="hidden">
-                  <li>
-                    <h3>About Us</h3>
+          {/* Nav Bar on Big Screens */}
+          <div className="hidden lg:flex lg:visible items-center">
+            <ul className="flex space-x-20 h-full items-center">
+              {/* Our Story */}
+              <li className="group relative h-full flex items-center">
+                <h1 className="text-[20px] cursor-pointer group-hover:text-gray-700 transition duration-300">
+                  Our Story
+                </h1>
+                <ul className="absolute left-0 top-full bg-white shadow-lg rounded p-4 space-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 invisible group-hover:visible z-10">
+                  <li className="whitespace-nowrap">
+                    <Link
+                      href="/our-story/about-us"
+                      className="hover:text-gray-500 transition"
+                    >
+                      <h3 className="whitespace-nowrap">About Us</h3>
+                    </Link>
                   </li>
                 </ul>
               </li>
-              <li className="mx-20">
-                <h1 className="text-[20px]">Our Pets</h1>
-                <ul className="hidden">
-                  <li>
-                    <h3>Good Grief</h3>
+              {/* Our Pets */}
+              <li className="group relative h-full flex items-center">
+                <h1 className="text-[20px] cursor-pointer group-hover:text-gray-700 transition duration-300">
+                  Our Pets
+                </h1>
+                <ul className="absolute left-0 top-full bg-white shadow-lg rounded p-4 space-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 invisible group-hover:visible z-10">
+                  <li className="whitespace-nowrap">
+                    <Link
+                      href="/our-pets/good-grief"
+                      className="hover:text-gray-500 transition"
+                    >
+                      <h3 className="whitespace-nowrap">Good Grief</h3>
+                    </Link>
                   </li>
-                  <li>
-                    <h3>Memorials</h3>
+                  <li className="whitespace-nowrap">
+                    <Link
+                      href="/our-pets/memorials"
+                      className="hover:text-gray-500 transition"
+                    >
+                      <h3 className="whitespace-nowrap">Memorials</h3>
+                    </Link>
                   </li>
-                  <li>
-                    <h3>Pet Stories</h3>
+                  <li className="whitespace-nowrap">
+                    <Link
+                      href="/our-pets/pet-stories"
+                      className="hover:text-gray-500 transition"
+                    >
+                      <h3 className="whitespace-nowrap">Pet Stories</h3>
+                    </Link>
                   </li>
                 </ul>
               </li>
-              <li className="">
-                <h1 className="text-[20px] hover:bg-gray-200">Our Vision</h1>
-                <ul className="hidden">
-                  <li>
-                    <h3>Pet Car Program</h3>
+              {/* Our Vision */}
+              <li className="group relative h-full flex items-center">
+                <h1 className="text-[20px] cursor-pointer group-hover:text-gray-700 transition duration-300">
+                  Our Vision
+                </h1>
+                <ul className="absolute left-0 top-full bg-white shadow-lg rounded p-4 space-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 invisible group-hover:visible z-10">
+                  <li className="whitespace-nowrap">
+                    <Link
+                      href="/our-vision/pet-care-program"
+                      className="hover:text-gray-500 transition"
+                    >
+                      <h3 className="whitespace-nowrap">Pet Care Program</h3>
+                    </Link>
                   </li>
-                  <li>
-                    <h3>The Clubhouse</h3>
+                  <li className="whitespace-nowrap">
+                    <Link
+                      href="/our-vision/the-clubhouse"
+                      className="hover:text-gray-500 transition"
+                    >
+                      <h3 className="whitespace-nowrap">The Clubhouse</h3>
+                    </Link>
                   </li>
-                  <li>
-                    <h3>The Village</h3>
+                  <li className="whitespace-nowrap">
+                    <Link
+                      href="/our-vision/the-village"
+                      className="hover:text-gray-500 transition"
+                    >
+                      <h3 className="whitespace-nowrap">The Village</h3>
+                    </Link>
                   </li>
-                  <li>
-                    <h3>The TV Show</h3>
+                  <li className="whitespace-nowrap">
+                    <Link
+                      href="/our-vision/the-tv-show"
+                      className="hover:text-gray-500 transition"
+                    >
+                      <h3 className="whitespace-nowrap">The TV Show</h3>
+                    </Link>
                   </li>
-                  <li>
-                    <h3>Resources</h3>
+                  <li className="whitespace-nowrap">
+                    <Link
+                      href="/our-vision/resources"
+                      className="hover:text-gray-500 transition"
+                    >
+                      <h3 className="whitespace-nowrap">Resources</h3>
+                    </Link>
                   </li>
                 </ul>
               </li>

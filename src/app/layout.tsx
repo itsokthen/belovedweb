@@ -34,7 +34,9 @@ export default function RootLayout({
           <ImageSection />
         </div>
         <main className="flex-grow flex justify-center">
-          <div className="w-full max-w-[700px]">{children}</div>
+          <div className="w-full max-w-[700px] xl:max-w-[900px]">
+            {children}
+          </div>
         </main>
         <Footer />
       </body>

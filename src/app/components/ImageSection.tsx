@@ -7,17 +7,17 @@ const ImageSection = () => {
   const pathname = usePathname();
 
   let sectionText = "Home";
-  let imageUrl = "/catBeloved.jpg";
+  let imageUrl = "/home-banner.png";
 
   if (pathname.startsWith("/our-story")) {
     sectionText = "Our Story";
-    imageUrl = "/our-story-banner.jpg";
+    imageUrl = "/story-banner.jpg";
   } else if (pathname.startsWith("/our-pets")) {
     sectionText = "Our Pets";
-    imageUrl = "/our-pets-banner.jpg";
+    imageUrl = "/pets-banner.png";
   } else if (pathname.startsWith("/our-vision")) {
     sectionText = "Our Vision";
-    imageUrl = "/our-vision-banner.jpg";
+    imageUrl = "/vision-banner.png";
   }
 
   return (
