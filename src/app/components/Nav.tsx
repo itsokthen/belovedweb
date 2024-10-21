@@ -4,6 +4,7 @@ import Image from "next/image";
 import Hamburgerbutton from "./Hamburgerbutton";
 import OpenNav from "./OpenNav";
 import Link from "next/link";
+import LargeScreenNav from "./LargeScreenNav";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,6 +18,31 @@ const Nav = () => {
   const closeNav = () => {
     setIsOpen(false);
   };
+
+  const menuItems = [
+    {
+      label: "Our Story",
+      subItems: [{ label: "About Us", href: "/our-story/about-us" }],
+    },
+    {
+      label: "Our Pets",
+      subItems: [
+        { label: "Good Grief", href: "/our-pets/good-grief" },
+        { label: "Memorials", href: "/our-pets/memorials" },
+        { label: "Pet Stories", href: "/our-pets/pet-stories" },
+      ],
+    },
+    {
+      label: "Our Vision",
+      subItems: [
+        { label: "Pet Care Program", href: "/our-vision/pet-care-program" },
+        { label: "The Clubhouse", href: "/our-vision/the-clubhouse" },
+        { label: "The Village", href: "/our-vision/the-village" },
+        { label: "The TV Show", href: "/our-vision/the-tv-show" },
+        { label: "Resources", href: "/our-vision/resources" },
+      ],
+    },
+  ];
 
   return (
     <div>
@@ -36,107 +62,7 @@ const Nav = () => {
           <div className="lg:hidden">
             <Hamburgerbutton onClick={toggleNav} ref={hamburgerButtonRef} />
           </div>
-          {/* Nav Bar on Big Screens */}
-          <div className="hidden lg:flex lg:visible items-center">
-            <ul className="flex space-x-20 h-full items-center">
-              {/* Our Story */}
-              <li className="group relative h-full flex items-center">
-                <h1 className="text-[20px] cursor-pointer group-hover:text-gray-700 transition duration-300">
-                  Our Story
-                </h1>
-                <ul className="absolute left-0 top-full bg-white shadow-lg rounded p-4 space-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 invisible group-hover:visible z-10">
-                  <li className="whitespace-nowrap">
-                    <Link
-                      href="/our-story/about-us"
-                      className="hover:text-gray-500 transition"
-                    >
-                      <h3 className="whitespace-nowrap">About Us</h3>
-                    </Link>
-                  </li>
-                </ul>
-              </li>
-              {/* Our Pets */}
-              <li className="group relative h-full flex items-center">
-                <h1 className="text-[20px] cursor-pointer group-hover:text-gray-700 transition duration-300">
-                  Our Pets
-                </h1>
-                <ul className="absolute left-0 top-full bg-white shadow-lg rounded p-4 space-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 invisible group-hover:visible z-10">
-                  <li className="whitespace-nowrap">
-                    <Link
-                      href="/our-pets/good-grief"
-                      className="hover:text-gray-500 transition"
-                    >
-                      <h3 className="whitespace-nowrap">Good Grief</h3>
-                    </Link>
-                  </li>
-                  <li className="whitespace-nowrap">
-                    <Link
-                      href="/our-pets/memorials"
-                      className="hover:text-gray-500 transition"
-                    >
-                      <h3 className="whitespace-nowrap">Memorials</h3>
-                    </Link>
-                  </li>
-                  <li className="whitespace-nowrap">
-                    <Link
-                      href="/our-pets/pet-stories"
-                      className="hover:text-gray-500 transition"
-                    >
-                      <h3 className="whitespace-nowrap">Pet Stories</h3>
-                    </Link>
-                  </li>
-                </ul>
-              </li>
-              {/* Our Vision */}
-              <li className="group relative h-full flex items-center">
-                <h1 className="text-[20px] cursor-pointer group-hover:text-gray-700 transition duration-300">
-                  Our Vision
-                </h1>
-                <ul className="absolute left-0 top-full bg-white shadow-lg rounded p-4 space-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 invisible group-hover:visible z-10">
-                  <li className="whitespace-nowrap">
-                    <Link
-                      href="/our-vision/pet-care-program"
-                      className="hover:text-gray-500 transition"
-                    >
-                      <h3 className="whitespace-nowrap">Pet Care Program</h3>
-                    </Link>
-                  </li>
-                  <li className="whitespace-nowrap">
-                    <Link
-                      href="/our-vision/the-clubhouse"
-                      className="hover:text-gray-500 transition"
-                    >
-                      <h3 className="whitespace-nowrap">The Clubhouse</h3>
-                    </Link>
-                  </li>
-                  <li className="whitespace-nowrap">
-                    <Link
-                      href="/our-vision/the-village"
-                      className="hover:text-gray-500 transition"
-                    >
-                      <h3 className="whitespace-nowrap">The Village</h3>
-                    </Link>
-                  </li>
-                  <li className="whitespace-nowrap">
-                    <Link
-                      href="/our-vision/the-tv-show"
-                      className="hover:text-gray-500 transition"
-                    >
-                      <h3 className="whitespace-nowrap">The TV Show</h3>
-                    </Link>
-                  </li>
-                  <li className="whitespace-nowrap">
-                    <Link
-                      href="/our-vision/resources"
-                      className="hover:text-gray-500 transition"
-                    >
-                      <h3 className="whitespace-nowrap">Resources</h3>
-                    </Link>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
+          <LargeScreenNav menuItems={menuItems} />
         </div>
       </div>
       {isOpen && (
