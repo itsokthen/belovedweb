@@ -1,7 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: "export",
-  basePath: "/belovedweb", // replace 'your-repo' with your actual repository name
-};
+const nextConfig = {};
 
 export default nextConfig;
