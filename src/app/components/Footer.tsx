@@ -28,7 +28,14 @@ const Footer = () => {
         </div>
         <div className="mt-2">
           <h4>555-555-5555</h4>
-          <h4>info@BEloved.com</h4>
+          <h4>
+            <a
+              href="mailto:invest@BEloved.com"
+              className="text-blue-600 font-semibold hover:text-blue-800"
+            >
+              info@BEloved.com
+            </a>
+          </h4>
         </div>
         <div className="mt-5">
           <SocialMediaIcons />

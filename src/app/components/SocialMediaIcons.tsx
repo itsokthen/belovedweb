@@ -11,6 +11,7 @@ const SocialMediaIcons = () => {
         href="https://www.facebook.com/"
         target="_blank"
         rel="noopener noreferrer"
+        className="transition-transform duration-300 transform hover:scale-110"
       >
         <FontAwesomeIcon
           icon={faSquareFacebook}
@@ -21,6 +22,7 @@ const SocialMediaIcons = () => {
         href="https://www.instagram.com/"
         target="_blank"
         rel="noopener noreferrer"
+        className="transition-transform duration-300 transform hover:scale-110"
       >
         <FontAwesomeIcon
           icon={faInstagram}

@@ -26,7 +26,7 @@ const LargeScreenNav: React.FC<LargeScreenNavProps> = ({ menuItems }) => {
             key={index}
             className="hover:bg-primary transition px-6 group relative h-full flex"
           >
-            <h1 className="text-center mt-[20px] text-[20px] cursor-pointer group-hover:text-gray-700 transition duration-300">
+            <h1 className="text-center mt-[20px] text-[20px]  group-hover:text-gray-700 transition duration-300">
               {item.href ? (
                 <Link href={item.href}>{item.label}</Link>
               ) : (
@@ -35,7 +35,7 @@ const LargeScreenNav: React.FC<LargeScreenNavProps> = ({ menuItems }) => {
             </h1>
 
             {item.subItems && (
-              <ul className="bg-primary absolute left-0 top-full shadow-lg rounded-b space-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 invisible group-hover:visible z-10">
+              <ul className="bg-primary absolute left-0 top-full shadow-lg cursor-pointer rounded-b space-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 invisible group-hover:visible z-10">
                 {item.subItems.map((subItem, subIndex) => (
                   <li
                     key={subIndex}

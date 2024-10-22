@@ -8,18 +8,15 @@ export default function Page() {
         <>
           <p>
             If you&apos;ve ever been to an animal shelter, you have seen first
-            hand what a
-            <span className="font-bold text-primary">horrible place</span> it
-            is. No offense, they do the best they can with the money that is
-            donated. Caring for the animals is a{" "}
+            hand what a horrible place it is. No offense, they do the best they
+            can with the money that is donated. Caring for the animals is a{" "}
             <span className="font-bold text-primary">chore</span>. The
             conditions are less than ideal. Cages. No wonder pets adopted there
             might have <span className="font-bold text-primary">medical</span>{" "}
-            or
-            <span className="font-bold text-primary">behavioral issues</span>.
-            As best as the caregivers can do, there&apos;s a lot to be desired.
-            I have a <span className="font-bold text-primary">better idea</span>
-            .
+            or <span className="font-bold text-primary">behavioral issues</span>
+            . As best as the caregivers can do, there&apos;s a lot to be
+            desired. I have a{" "}
+            <span className="font-bold text-primary">better idea</span>.
           </p>
           <p>
             Instead of a shelter, let&apos;s build a{" "}
@@ -71,7 +68,7 @@ export default function Page() {
             <span className="font-bold text-primary">medical issues</span> and
             can get those addressed right away.
             <span className="font-bold text-primary">Training issues</span> can
-            be addressed immediately. We are truly making a pet
+            be addressed immediately. We are truly making a pet{" "}
             <span className="font-bold text-primary">home ready</span> for that
             potential adopter.
           </p>
@@ -79,7 +76,7 @@ export default function Page() {
             The foster parent pays for their food. We require the dogs are fed{" "}
             <span className="font-bold text-primary">high quality food</span>{" "}
             available in our pet store. We will have leashes and toys and treats
-            - on campus - for them to choose from. It&apos;s conceivable to
+            - on campus - for them to choose from. It&apos;s conceivable to{" "}
             <span className="font-bold text-primary">rebrand/repackage</span> a
             high-end food with our name on it. We could possibly make that food
             available to vets and pet stores in the area. Best case scenario,
@@ -107,7 +104,7 @@ export default function Page() {
             covered by the village. However, the foster parent still needs to
             keep an eye out for medical issues so they can be addressed sooner
             rather than later. The foster parent is responsible for{" "}
-            <span className="font-bold text-primary">flea meds</span> and
+            <span className="font-bold text-primary">flea meds</span> and{" "}
             <span className="font-bold text-primary">heartworm meds</span> since
             those are care, not a medical issue.
           </p>
@@ -122,7 +119,7 @@ export default function Page() {
             <span className="font-bold text-primary">wholesale basis</span>.
             Surgery, for example. Maybe{" "}
             <span className="font-bold text-primary">MRI services</span>. An
-            in-house pharmacy that competes with online sources.
+            in-house pharmacy that competes with online sources.{" "}
             <span className="font-bold text-primary">Communication</span> is
             essential. Build relationships and find our{" "}
             <span className="font-bold text-primary">niche</span>.
@@ -141,7 +138,7 @@ export default function Page() {
           </p>
           <p>
             Our villagers are not paying rent or utilities, but all the things
-            they were spending money on beyond that, are now
+            they were spending money on beyond that, are now{" "}
             <span className="font-bold text-primary">revenue streams</span> for
             the village.
           </p>
@@ -153,10 +150,8 @@ export default function Page() {
           <hr className="border-t-2 border-gray-300 my-8 w-full" />
           <p>
             We could charge a little more for our pets because they are the
-            best. We could set it up that the pets all have
-            <span className="font-bold text-primary">
-              vet prepaid medical
-            </span>{" "}
+            best. We could set it up that the pets all have{" "}
+            <span className="font-bold text-primary">vet prepaid medical</span>{" "}
             through our own clinic. We could encourage them to visit our trainer
             and buy our food, join us in{" "}
             <span className="font-bold text-primary">social events</span> and

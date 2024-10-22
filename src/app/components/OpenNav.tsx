@@ -12,6 +12,7 @@ const OpenNav: React.FC<OpenNavProps> = ({
   hamburgerButtonRef,
 }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isNavOpen, setIsNavOpen] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
 
@@ -58,15 +59,15 @@ const OpenNav: React.FC<OpenNavProps> = ({
   return (
     <div ref={navRef}>
       <div
-        className="fixed z-50 bg-white  right-0 w-4/5 flex flex-col shadow-lg 
+        className="fixed z-50 bg-secondary  right-0 w-4/5 flex flex-col shadow-lg 
              top-[var(--navHeightSM)] lg:top-[var(--navHeightLG)] 
              h-[calc(100vh-var(--navHeightSM))] lg:h-[calc(100vh-var(--navHeightLG))] ${isNavOpen ? 'block' : 'hidden'}`"
       >
-        <ul className="flex-grow p-6 space-y-6 border-b border-gray-200">
+        <ul className="flex-grow space-y-6 border-b border-gray-200">
           <li className="transition-transform duration-300">
             <p
               onClick={() => toggleDropdown(0)}
-              className="cursor-pointer font-bold text-2xl hover:text-blue-500 transition flex items-center justify-between ml-2 py-4"
+              className="cursor-pointer font-bold text-[30px] hover:text-altSec transition flex items-center justify-between ml-2 py-4"
             >
               Our Story
               <span
@@ -77,20 +78,24 @@ const OpenNav: React.FC<OpenNavProps> = ({
                 ▼
               </span>
             </p>
-            {openIndex === 0 && (
-              <ul className="ml-4 mt-2 bg-gray-100 rounded shadow p-4">
+            <div
+              className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                openIndex === 0 ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
+              }`}
+            >
+              <ul className="mt-2 bg-white rounded shadow">
                 <Link href="/our-story/about-us" onClick={closeOpenNav}>
-                  <li className="py-2 text-lg hover:bg-gray-200 transition">
+                  <li className="py-6 px-3 text-[20px] hover:bg-gray-200 transition">
                     About Us
                   </li>
                 </Link>
               </ul>
-            )}
+            </div>
           </li>
           <li className="transition-transform duration-300">
             <p
               onClick={() => toggleDropdown(1)}
-              className="cursor-pointer font-bold text-2xl hover:text-blue-500 transition flex items-center justify-between ml-2 py-4"
+              className="cursor-pointer font-bold text-[30px] hover:text-altSec transition flex items-center justify-between ml-2 py-4"
             >
               Our Pets
               <span
@@ -101,30 +106,36 @@ const OpenNav: React.FC<OpenNavProps> = ({
                 ▼
               </span>
             </p>
-            {openIndex === 1 && (
-              <ul className="ml-4 mt-2 bg-gray-100 rounded shadow p-4">
+            <div
+              className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                openIndex === 1
+                  ? "max-h-[700px] opacity-100"
+                  : "max-h-0 opacity-0"
+              }`}
+            >
+              <ul className="mt-2 bg-white rounded shadow p-4">
                 <Link href="/our-pets/good-grief" onClick={closeOpenNav}>
-                  <li className="py-2 text-lg hover:bg-gray-200 transition">
+                  <li className="py-6 px-3 text-[20px] hover:bg-gray-200 transition">
                     Good Grief
                   </li>
                 </Link>
                 <Link href="/our-pets/memorials" onClick={closeOpenNav}>
-                  <li className="py-2 text-lg hover:bg-gray-200 transition">
+                  <li className="py-6 px-3 text-[20px] hover:bg-gray-200 transition">
                     Memorials
                   </li>
                 </Link>
                 <Link href="/our-pets/pet-stories" onClick={closeOpenNav}>
-                  <li className="py-2 text-lg hover:bg-gray-200 transition">
+                  <li className="py-6 px-3 text-[20px] hover:bg-gray-200 transition">
                     Pet Stories
                   </li>
                 </Link>
               </ul>
-            )}
+            </div>
           </li>
           <li className="transition-transform duration-300">
             <p
               onClick={() => toggleDropdown(2)}
-              className="cursor-pointer font-bold text-2xl hover:text-blue-500 transition flex items-center justify-between ml-2 py-4"
+              className="cursor-pointer font-bold text-[30px] hover:text-altSec transition flex items-center justify-between ml-2 py-4"
             >
               Our Vision
               <span
@@ -135,38 +146,44 @@ const OpenNav: React.FC<OpenNavProps> = ({
                 ▼
               </span>
             </p>
-            {openIndex === 2 && (
-              <ul className="ml-4 mt-2 bg-gray-100 rounded shadow p-4">
+            <div
+              className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                openIndex === 2
+                  ? "max-h-[700px] opacity-100"
+                  : "max-h-0 opacity-0"
+              }`}
+            >
+              <ul className="mt-2 bg-white rounded shadow p-4">
                 <Link
                   href="/our-vision/pet-care-program"
                   onClick={closeOpenNav}
                 >
-                  <li className="py-2 text-lg hover:bg-gray-200 transition">
+                  <li className="py-6 px-3 text-[20px] hover:bg-gray-200 transition">
                     Pet Care Program
                   </li>
                 </Link>
                 <Link href="/our-vision/the-clubhouse" onClick={closeOpenNav}>
-                  <li className="py-2 text-lg hover:bg-gray-200 transition">
+                  <li className="py-6 px-3 text-[20px] hover:bg-gray-200 transition">
                     The Clubhouse
                   </li>
                 </Link>
                 <Link href="/our-vision/the-village" onClick={closeOpenNav}>
-                  <li className="py-2 text-lg hover:bg-gray-200 transition">
+                  <li className="py-6 px-3 text-[20px] hover:bg-gray-200 transition">
                     The Village
                   </li>
                 </Link>
                 <Link href="/our-vision/the-tv-show" onClick={closeOpenNav}>
-                  <li className="py-2 text-lg hover:bg-gray-200 transition">
+                  <li className="py-6 px-3 text-[20px] hover:bg-gray-200 transition">
                     The TV Show
                   </li>
                 </Link>
                 <Link href="/our-vision/resources" onClick={closeOpenNav}>
-                  <li className="py-2 text-lg hover:bg-gray-200 transition">
+                  <li className="py-6 px-3 text-[20px] hover:bg-gray-200 transition">
                     Resources
                   </li>
                 </Link>
               </ul>
-            )}
+            </div>
           </li>
         </ul>
         <div className="h-40 flex items-center justify-center">
