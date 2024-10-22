@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import SocialMediaIcons from "./SocialMediaIcons";
 
 const Footer = () => {
   return (
@@ -10,7 +11,7 @@ const Footer = () => {
         <Image src="/Icon2.png" alt="Heart Icon" width="70" height="70" />
         <Image src="/Icon3.png" alt="Peace Icon" width="70" height="70" />
       </div>
-      <div className="text-center flex flex-col mx-10 items-center max-w-[700px]">
+      <div className="text-center flex flex-col mx-10 items-center max-w-[700px] xl:max-w-[900px] 2xl:max-w-[1200px]">
         <p>
           Change the Story. We have so much love to give. Many people never get
           another pet because they don’t want to hurt like this again. One pet’s
@@ -21,15 +22,17 @@ const Footer = () => {
           pass it on to a new pet that needs us.
         </p>
         <div className="mt-5">
-          <h2>Contact</h2>
+          <h2 className="font-bold text-[20px]">Contact</h2>
           <h4>1600 Pennsylvania Ave</h4>
           <h4>Washington, DC</h4>
         </div>
-        <div className="mt-5">
+        <div className="mt-2">
           <h4>555-555-5555</h4>
           <h4>info@BEloved.com</h4>
         </div>
-        <div className="mt-5">Image of facebook and insta</div>
+        <div className="mt-5">
+          <SocialMediaIcons />
+        </div>
         <div className="mt-5 mb-5">
           <h4>&copy; BEloved</h4>
         </div>

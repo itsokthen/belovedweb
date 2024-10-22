@@ -5,6 +5,10 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import ImageSection from "./components/ImageSection";
 
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
+
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
 //   variable: "--font-geist-sans",
@@ -34,7 +38,7 @@ export default function RootLayout({
           <ImageSection />
         </div>
         <main className="flex-grow flex justify-center">
-          <div className="w-full max-w-[700px] xl:max-w-[900px]">
+          <div className="w-full max-w-[700px] xl:max-w-[900px] 2xl:max-w-[1200px]">
             {children}
           </div>
         </main>

@@ -15,7 +15,7 @@
 } */
 
 :root {
-  --navHeightSM: 107.5px;
+  --navHeightSM: 97.5px;
   --navHeightLG: 145px;
 }
 html,
@@ -45,6 +45,9 @@ p {
 }
 h1 {
   font-size: 50px;
+}
+.page-layout p {
+  margin-top: 10px;
 }
 .object-cover {
   object-fit: cover;

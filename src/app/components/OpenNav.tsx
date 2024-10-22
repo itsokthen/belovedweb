@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import SocialMediaIcons from "./SocialMediaIcons";
 
 interface OpenNavProps {
   closeOpenNav: () => void;
@@ -11,13 +12,14 @@ const OpenNav: React.FC<OpenNavProps> = ({
   hamburgerButtonRef,
 }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [isNavOpen, setIsNavOpen] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
 
   const toggleDropdown = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  // Close the nav if clicked outside except on hamburgerbutton
+  // Close the nav if clicked outside except on hamburger button
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as Node;
@@ -37,12 +39,28 @@ const OpenNav: React.FC<OpenNavProps> = ({
     };
   }, [navRef, closeOpenNav, hamburgerButtonRef]);
 
+  // Monitor window size to close the nav on lg screens and larger
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        // lg breakpoint
+        setIsNavOpen(false);
+        closeOpenNav();
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [closeOpenNav]);
+
   return (
     <div ref={navRef}>
       <div
         className="fixed z-50 bg-white  right-0 w-4/5 flex flex-col shadow-lg 
              top-[var(--navHeightSM)] lg:top-[var(--navHeightLG)] 
-             h-[calc(100vh-var(--navHeightSM))] lg:h-[calc(100vh-var(--navHeightLG))]"
+             h-[calc(100vh-var(--navHeightSM))] lg:h-[calc(100vh-var(--navHeightLG))] ${isNavOpen ? 'block' : 'hidden'}`"
       >
         <ul className="flex-grow p-6 space-y-6 border-b border-gray-200">
           <li className="transition-transform duration-300">
@@ -152,12 +170,16 @@ const OpenNav: React.FC<OpenNavProps> = ({
           </li>
         </ul>
         <div className="h-40 flex items-center justify-center">
-          <button className="bg-blue-600 text-white py-3 px-6 rounded shadow hover:bg-blue-700 transition text-lg">
-            Donate
-          </button>
+          <Link href="/Donate" onClick={closeOpenNav}>
+            <button className="bg-blue-600 text-white py-8 px-10 rounded shadow hover:bg-blue-700 transition text-3xl">
+              Donate
+            </button>
+          </Link>
         </div>
         <div className="h-40 flex items-center justify-center">
-          <p className="text-gray-600 text-lg">Facebook Instagram</p>
+          <p>
+            <SocialMediaIcons />
+          </p>
         </div>
       </div>
     </div>

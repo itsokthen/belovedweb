@@ -47,7 +47,7 @@ const Nav = () => {
   return (
     <div>
       <div className="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
-        <div className="w-full max-w-[700px] xl:max-w-[900px] mx-auto flex items-stretch justify-between pt-4 h-[auto] lg:h-[145px]">
+        <div className="w-full max-w-[700px] xl:max-w-[900px] 2xl:max-w-[1200px] mx-auto flex items-stretch justify-between pt-4 h-[auto] lg:h-[145px]">
           <div className="w-[200px] lg:w-[300px]">
             <Link href="/">
               <Image
