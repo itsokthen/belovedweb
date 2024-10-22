@@ -51,24 +51,26 @@ export default function Page() {
           </p>
           <hr className="border-t-2 border-gray-300 my-8 w-full" />
           <p>
-            The Stage won't have a band, except for special events. In our
-            weekly events, we'll use the mic for stories and poetry slams. The
-            MAIN use of this mic is for those who have written a book. Come take
-            the mic, tell about your book, tell us what you've learned and your
-            own healing journey, sign a few copies and we'll put those in our
-            library (as well as sell copies).
+            The Stage won&apos;t have a band, except for special events. In our
+            weekly events, we&apos;ll use the mic for stories and poetry slams.
+            The MAIN use of this mic is for those who have written a book. Come
+            take the mic, tell about your book, tell us what you&apos;ve learned
+            and your own healing journey, sign a few copies and we&apos;ll put
+            those in our library (as well as sell copies).
           </p>
           <hr className="border-t-2 border-gray-300 my-8 w-full" />
           <p>
             A library with books about grief and recovery. If a therapist or
-            someone has written a book, we'll invite them to come take the mic
-            and tell us about their book, tell us what they've learned and what
-            works for them, sign a few copies and they’ll add it to our library.
-            You can relax and read a book while you have a beer or enjoy some
-            food.
+            someone has written a book, we&apos;ll invite them to come take the
+            mic and tell us about their book, tell us what they&apos;ve learned
+            and what works for them, sign a few copies and they&apos;ll add it
+            to our library. You can relax and read a book while you have a beer
+            or enjoy some food.
           </p>
           <hr className="border-t-2 border-gray-300 my-8 w-full" />
-          <p>We’ll offer our own master-crafted memorials in a showroom.</p>
+          <p>
+            We&apos;ll offer our own master-crafted memorials in a showroom.
+          </p>
           <p>
             Along with those, we can offer products that others have created and
             introduced. To purchase, of course. But hopefully, to give you ideas
@@ -81,7 +83,7 @@ export default function Page() {
             require more technical skills.
           </p>
           <p>
-            In time, I'd like to explore the possibility of making our own
+            In time, I&apos;d like to explore the possibility of making our own
             headstones and grave markers instead of ordering them from a vendor.
           </p>
           <p>
@@ -90,7 +92,7 @@ export default function Page() {
           </p>
           <hr className="border-t-2 border-gray-300 my-8 w-full" />
           <p>
-            We’ll offer offices for therapists to rent by the hour, day, or
+            We&apos;ll offer offices for therapists to rent by the hour, day, or
             month - they can even poach clients in the bar.
           </p>
           <hr className="border-t-2 border-gray-300 my-8 w-full" />
@@ -100,8 +102,8 @@ export default function Page() {
             advisor of your choice. *A minister, a rabbi, and a funeral director
             walk into a bar. There had to be a joke in there someplace. Maybe
             even burial services. If you want to bury your pet at your home, say
-            the word and we'll bring the shovels. We can also produce headstones
-            and grave markers.
+            the word and we&apos;ll bring the shovels. We can also produce
+            headstones and grave markers.
           </p>
           <hr className="border-t-2 border-gray-300 my-8 w-full" />
           <p>
@@ -110,27 +112,28 @@ export default function Page() {
           </p>
           <hr className="border-t-2 border-gray-300 my-8 w-full" />
           <p>
-            I’d also like to offer an ash storage / visitation service. Standing
-            there in the vet's office having to make FINANCIAL decisions about
-            what to do with the ashes as I grappled with saying goodbye was
-            overwhelming. The ash service can take some of the pressure off and
-            let people make decisions when they're ready.
+            I&apos;d also like to offer an ash storage / visitation service.
+            Standing there in the vet&apos;s office having to make FINANCIAL
+            decisions about what to do with the ashes as I grappled with saying
+            goodbye was overwhelming. The ash service can take some of the
+            pressure off and let people make decisions when they&apos;re ready.
           </p>
           <p>
-            We'll coordinate with the vet to collect the ashes from the
-            crematory. We'll store them until you are ready for a memorial of
-            some kind. Whether that's a service or a crafted piece, you get to
-            catch your breath before you begin.
+            We&apos;ll coordinate with the vet to collect the ashes from the
+            crematory. We&apos;ll store them until you are ready for a memorial
+            of some kind. Whether that&apos;s a service or a crafted piece, you
+            get to catch your breath before you begin.
           </p>
           <hr className="border-t-2 border-gray-300 my-8 w-full" />
           <p>
             Another service that we can provide is a visitation service. Some
-            people don't want to keep an urn or memorial piece because their
-            grief is too intense when they see it. However, the idea of simply
-            discarding the ashes is also too much. In these rooms, the BEloved
-            can visit their pets in a prepared room. Rooms can be designed to
-            resemble a living room, for example. Come in and watch a movie with
-            your pet nearby. After, we return the ashes to storage for later.
+            people don&apos;t want to keep an urn or memorial piece because
+            their grief is too intense when they see it. However, the idea of
+            simply discarding the ashes is also too much. In these rooms, the
+            BEloved can visit their pets in a prepared room. Rooms can be
+            designed to resemble a living room, for example. Come in and watch a
+            movie with your pet nearby. After, we return the ashes to storage
+            for later.
           </p>
         </>
       }
