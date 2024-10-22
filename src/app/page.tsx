@@ -1,14 +1,13 @@
 import React from "react";
+import PageLayout from "./components/PageLayout";
 
 export default function Home() {
   return (
-    <div>
-      <section>
-        <div className="mx-10 my-10">
-          <h1 className="text-6xl text-center font-bold text-altSec mb-10">
-            Welcome to the Clubhouse: A Place for Healing
-          </h1>
-          <p className="text-3xl">
+    <PageLayout
+      title="Welcome to the Clubhouse: A Place for Healing"
+      content={
+        <>
+          <p className="">
             When we lose a beloved pet, the grief can be overwhelming, but often
             we lack the support and understanding that comes with losing a
             person. At the Clubhouse, we&apos;ve created a space where you can{" "}
@@ -24,8 +23,8 @@ export default function Home() {
             offering tools, resources, and a warm environment to help you heal.{" "}
             <span className="font-bold text-primary">Come check us out!</span>
           </p>
-        </div>
-      </section>
-    </div>
+        </>
+      }
+    />
   );
 }

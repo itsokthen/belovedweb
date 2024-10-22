@@ -18,6 +18,9 @@ const ImageSection = () => {
   } else if (pathname.startsWith("/our-vision")) {
     sectionText = "Our Vision";
     imageUrl = "/vision-banner.png";
+  } else if (pathname.startsWith("/Donate")) {
+    sectionText = "Contribute";
+    imageUrl = "/vision-banner.png"; //Update
   }
 
   return (

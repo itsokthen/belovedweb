@@ -40,6 +40,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
 }
+p {
+  font-size: 24px;
+}
+h1 {
+  font-size: 50px;
+}
 .object-cover {
   object-fit: cover;
 }
