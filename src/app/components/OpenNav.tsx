@@ -113,7 +113,7 @@ const OpenNav: React.FC<OpenNavProps> = ({
                   : "max-h-0 opacity-0"
               }`}
             >
-              <ul className="mt-2 bg-white rounded shadow p-4">
+              <ul className="mt-2 bg-white rounded shadow">
                 <Link href="/our-pets/good-grief" onClick={closeOpenNav}>
                   <li className="py-6 px-3 text-[20px] hover:bg-gray-200 transition">
                     Good Grief
@@ -153,7 +153,7 @@ const OpenNav: React.FC<OpenNavProps> = ({
                   : "max-h-0 opacity-0"
               }`}
             >
-              <ul className="mt-2 bg-white rounded shadow p-4">
+              <ul className="mt-2 bg-white rounded shadow">
                 <Link
                   href="/our-vision/pet-care-program"
                   onClick={closeOpenNav}
@@ -172,7 +172,7 @@ const OpenNav: React.FC<OpenNavProps> = ({
                     The Village
                   </li>
                 </Link>
-                <Link href="/our-vision/the-tv-show" onClick={closeOpenNav}>
+                <Link href="/our-vision/the-TV-show" onClick={closeOpenNav}>
                   <li className="py-6 px-3 text-[20px] hover:bg-gray-200 transition">
                     The TV Show
                   </li>

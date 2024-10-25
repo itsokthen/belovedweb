@@ -8,15 +8,18 @@ import LargeScreenNav from "./LargeScreenNav";
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [active, setActive] = useState(false);
   const hamburgerButtonRef = useRef<HTMLButtonElement>(null);
 
   const toggleNav = (event: React.MouseEvent) => {
     event.stopPropagation();
     setIsOpen((prev) => !prev);
+    setActive((prev) => !prev);
   };
 
   const closeNav = () => {
     setIsOpen(false);
+    setActive(false);
   };
 
   const menuItems = [
@@ -38,7 +41,7 @@ const Nav = () => {
         { label: "Pet Care Program", href: "/our-vision/pet-care-program" },
         { label: "The Clubhouse", href: "/our-vision/the-clubhouse" },
         { label: "The Village", href: "/our-vision/the-village" },
-        { label: "The TV Show", href: "/our-vision/the-tv-show" },
+        { label: "The TV Show", href: "/our-vision/the-TV-show" },
         { label: "Resources", href: "/our-vision/resources" },
       ],
     },
@@ -60,7 +63,11 @@ const Nav = () => {
             </Link>
           </div>
           <div className="lg:hidden">
-            <Hamburgerbutton onClick={toggleNav} ref={hamburgerButtonRef} />
+            <Hamburgerbutton
+              onClick={toggleNav}
+              active={active}
+              ref={hamburgerButtonRef}
+            />
           </div>
           <LargeScreenNav menuItems={menuItems} />
         </div>
