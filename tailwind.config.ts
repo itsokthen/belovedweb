@@ -15,6 +15,9 @@ const config: Config = {
         secondary: "#d6ab82",
         altSec: "#623412",
       },
+      screens: {
+        lg: "1025px", // To account for tablets with 1024px screens
+      },
     },
   },
   plugins: [],

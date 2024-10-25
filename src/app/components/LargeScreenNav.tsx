@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 
 interface SubItem {
@@ -18,72 +18,30 @@ interface LargeScreenNavProps {
 }
 
 const LargeScreenNav: React.FC<LargeScreenNavProps> = ({ menuItems }) => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const [linkClicked, setLinkClicked] = useState(false);
-  const navRef = useRef<HTMLDivElement>(null);
-
-  const toggleDropdown = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-    setLinkClicked(false);
-  };
-
-  const handleLinkClick = () => {
-    setOpenIndex(null);
-    setLinkClicked(true);
-  };
-
-  const handleClickOutside = (event: MouseEvent) => {
-    if (navRef.current && !navRef.current.contains(event.target as Node)) {
-      setOpenIndex(null);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
-
   return (
-    <div className="hidden lg:flex lg:visible items-end" ref={navRef}>
+    <div className="hidden lg:flex lg:visible items-end">
       <ul className="flex h-full xl:h-4/5 items-center">
         {menuItems.map((item, index) => (
           <li
             key={index}
-            className={`transition px-6 group relative h-full flex ${
-              linkClicked ? "hover:bg-white" : "hover:bg-primary"
-            }`}
+            className="hover:bg-primary transition px-6 group relative h-full flex"
           >
-            <h1
-              className="text-center mt-[20px] text-[20px] group-hover:text-gray-700 transition duration-300 cursor-pointer"
-              onClick={() => item.subItems && toggleDropdown(index)}
-            >
+            <h1 className="text-center mt-[20px] text-[20px]  group-hover:text-gray-700 transition duration-300">
               {item.href ? (
-                <Link href={item.href} onClick={handleLinkClick}>
-                  {item.label}
-                </Link>
+                <Link href={item.href}>{item.label}</Link>
               ) : (
                 item.label
               )}
             </h1>
 
             {item.subItems && (
-              <ul
-                className={`bg-primary absolute left-0 top-full shadow-lg cursor-pointer rounded-b space-y-2 
-                  ${
-                    openIndex === index
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 translate-y-2 invisible"
-                  }
-                  transition-all duration-300 z-10`}
-              >
+              <ul className="bg-primary absolute left-0 top-full shadow-lg cursor-pointer rounded-b space-y-2 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 invisible group-hover:visible z-10">
                 {item.subItems.map((subItem, subIndex) => (
                   <li
                     key={subIndex}
                     className="hover:bg-secondary transition p-4 whitespace-nowrap"
                   >
-                    <Link href={subItem.href} onClick={handleLinkClick}>
+                    <Link href={subItem.href} className="">
                       <h3 className="text-[20px] mr-6 whitespace-nowrap min-w-[120px]">
                         {subItem.label}
                       </h3>
@@ -96,7 +54,7 @@ const LargeScreenNav: React.FC<LargeScreenNavProps> = ({ menuItems }) => {
         ))}
       </ul>
       <div className="ml-10 mb-[55px] flex justify-center items-center">
-        <Link href="/Donate" onClick={handleLinkClick}>
+        <Link href="/Donate">
           <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-6 rounded-lg transition duration-300">
             Contribute
           </button>
